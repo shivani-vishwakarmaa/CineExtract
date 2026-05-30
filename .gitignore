@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtualenv
+.venv/
+venv/
+uv/
+
+# Env files
+.env
+
+# Streamlit
+.streamlit/
+
+# IDE
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
