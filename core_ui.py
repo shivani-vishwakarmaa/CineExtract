@@ -163,7 +163,7 @@ h1, h2, h3, h4 {
 # ── Model ─────────────────────────────────────────────────────────────────────
 @st.cache_resource
 def get_model():
-    return ChatMistralAI(model="mistral-small-2603")
+    return ChatMistralAI(model="mistral-small-2603"),api_key=st.secrets["MISTRAL_API_KEY"])
 
 # ── Schema ────────────────────────────────────────────────────────────────────
 class Movie(BaseModel):
