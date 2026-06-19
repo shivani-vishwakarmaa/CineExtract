@@ -4,7 +4,7 @@ load_dotenv()
 
 from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import List, Optional
 from langchain_core.output_parsers import PydanticOutputParser
 
@@ -173,27 +173,27 @@ class Movie(BaseModel):
     movie_name: str
     release_year: Optional[int] = None
 
-    genre: Optional[List[str]] = None
+    genre: List[str] = Field(default_factory=list)
 
     director: Optional[str] = None
     producer: Optional[str] = None
     production_company: Optional[str] = None
 
-    main_cast: Optional[List[str]] = None
-    main_characters: Optional[List[str]] = None
+    main_cast: List[str] = Field(default_factory=list)
+    main_characters: List[str] = Field(default_factory=list)
 
     villain_antagonist: Optional[str] = None
 
     plot_overview: Optional[str] = None
 
-    awards_achievements: Optional[List[str]] = None
+    awards_achievements: List[str] = Field(default_factory=list)
     ratings_reviews: Optional[str] = None
 
-    themes_tone: Optional[List[str]] = None
+    themes_tone: List[str] = Field(default_factory=list)
 
     setting: Optional[str] = None
 
-    special_highlights: Optional[List[str]] = None
+    special_highlights: List[str] = Field(default_factory=list)
 
     quick_summary: Optional[str] = None
 
