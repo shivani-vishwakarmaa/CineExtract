@@ -171,21 +171,31 @@ def get_model():
 # ── Schema ────────────────────────────────────────────────────────────────────
 class Movie(BaseModel):
     movie_name: str
-    release_year: int
-    genre: List[str]
+    release_year: Optional[int] = None
+
+    genre: Optional[List[str]] = None
+
     director: Optional[str] = None
     producer: Optional[str] = None
     production_company: Optional[str] = None
-    main_cast: List[str]
-    main_characters: List[str]
+
+    main_cast: Optional[List[str]] = None
+    main_characters: Optional[List[str]] = None
+
     villain_antagonist: Optional[str] = None
-    plot_overview: str
+
+    plot_overview: Optional[str] = None
+
     awards_achievements: Optional[List[str]] = None
     ratings_reviews: Optional[str] = None
-    themes_tone: List[str]
+
+    themes_tone: Optional[List[str]] = None
+
     setting: Optional[str] = None
-    special_highlights: List[str]
-    quick_summary: str
+
+    special_highlights: Optional[List[str]] = None
+
+    quick_summary: Optional[str] = None
 
 # ── Hero ──────────────────────────────────────────────────────────────────────
 st.markdown("""
