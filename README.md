@@ -3,7 +3,9 @@
 App to extract structured movie information from a paragraph using LLM. 
 <br>
 [visit website](https://cineextract.streamlit.app/)
-
+<br>
+[Demo](https://youtu.be/Hrk06kWD33c?si=qfDe0kKAiInnoP93)
+---
 ## Files added
 - `core.py` — CLI-style extractor (prompts for input).
 - `core_ui.py` — Streamlit app UI.
